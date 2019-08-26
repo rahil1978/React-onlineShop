@@ -32,16 +32,18 @@ class App extends React.Component {
               id: snapShot.id,
               ...snapShot.data()
             }
-          },
-          () => {
-            console.log(this.state);
-          }
-          )
+          })
         });
       }
 
+      
+      
+      //if no user found then set currentUser to null
       this.setState({currentUser: userAuth});
+
+      console.log(this.state);
       });
+      
   }
   
   componentWillUnmount()
